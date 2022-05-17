@@ -1,3 +1,4 @@
+// animate pages and controls
 const pageTransition = () => {
   // button click to active class
   [ ...document.querySelectorAll('.control') ].forEach(control => {
