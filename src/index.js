@@ -13,6 +13,11 @@ const pageTransition = () => {
       document.getElementById(control.dataset.id).classList.add('active');
     });
   });
+
+  // toggle theme
+  document.querySelector('.theme-btn').addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+  });
 };
 // call main function
 pageTransition();

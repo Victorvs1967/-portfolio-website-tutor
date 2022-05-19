@@ -21,23 +21,24 @@
   --color-grey-6: #12181b;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .2);
+
+  //   --color-primary: #191d2b;
+  //   --color-secondary: #27ae60;
 }
 
-// :root {
-//   --color-primary: #191d2b;
-//   --color-secondary: #27ae60;
-//   --color-white: #ffffff;
-//   --color-black: #000000;
-//   --color-grey-0: #f8f8f8;
-//   --color-grey-1: #dbe1e8;
-//   --color-grey-2: #b2becd;
-//   --color-grey-3: #6c7983;
-//   --color-grey-4: #454e56;
-//   --color-grey-5: #2a2e35;
-//   --color-grey-6: #12181b;
-//   --br-sm-2: 14px;
-//   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .2);
-// }
+.light-mode {
+  --color-primary: #f1f1f1;
+  --color-secondary: #D7263D;
+  --color-white: #565656;
+  --color-black: #ffffff;
+  --color-grey-6: #f8f8f8;
+  --color-grey-5: #dbe1e8;
+  --color-grey-4: #b2becd;
+  --color-grey-3: #6c7983;
+  --color-grey-2: #454e56;
+  --color-grey-1: #2a2e35;
+  --color-grey-0: #12181b;
+}
 
 body {
   background-color: var(--color-primary);
@@ -147,6 +148,35 @@ section {
     i {
       color: var(--color-white) !important;
     }
+  }
+}
+
+.theme-btn {
+  position: fixed;
+  top: 5%;
+  right: 3%;
+  width: 70px;
+  width: 70px;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--color-grey-4);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;justify-content: center;
+  align-items: center;
+  margin: 0.7rem 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
+  transition: all .2s ease-in-out;
+
+  i {
+    font-size: 1.4rem;
+    color: var(--color-grey-2);
+    pointer-events: none;
+  }
+
+  &:active {
+    transform: translateY(-5px);
   }
 }
 
@@ -674,10 +704,6 @@ section {
     }
   }
 
-  .contact-icon {
-
-  }
-
   .right-contact {
     flex: 3;
     margin-left: 3rem;
@@ -702,6 +728,7 @@ section {
 
     .input-control-block {
       display: flex;
+
       :last-child {
         margin-left: 1.5rem;
       }
@@ -751,7 +778,7 @@ section {
     top: 0;
     right: 0;
     transform: translateX(100%);
-    z-index: -1;
+    z-index: -11;
 }
 
   &:hover {
@@ -793,3 +820,5 @@ section {
     }
   }
 }
+
+@import './media';
